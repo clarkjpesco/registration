@@ -1,13 +1,13 @@
 import React from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
-import PersonalForm from "./1PersonalForm";
-import MorePersonalForm from "./1MorePersonalForm";
-import CitizenForm from "./1CitizenForm";
-import ContactForm from "./2ContactForm";
-import FatherForm from "./3FatherForm";
-import MotherForm from "./3MotherForm";
-import CourseForm from "./4CourseForm";
+import PersonalForm from "./PersonalForm";
+import MorePersonalForm from "./MorePersonalForm";
+import CitizenForm from "./CitizenForm";
+import ContactForm from "./ContactForm";
+import FatherForm from "./FatherForm";
+import MotherForm from "./MotherForm";
+import CourseForm from "./CourseForm";
 import Review from "./Review";
 import { SignupFormProvider } from "./SignupFormContext";
 import StepLinks from "./StepLinks";
@@ -21,7 +21,7 @@ const SignupForm = () => {
         <StepLinks />
         <AnimatePresence>
           <Routes location={location} key={location.pathname}>
-            <Route path='/' element={<PersonalForm />} />
+            <Route path='/registration' element={<PersonalForm />} />
             <Route path='/more' element={<MorePersonalForm />} />
             <Route path='/citizen' element={<CitizenForm />} />
             <Route path='/contact' element={<ContactForm />} />
