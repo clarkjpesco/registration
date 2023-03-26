@@ -44,8 +44,8 @@ const MorePersonalForm = () => {
           <option value=''>Civil Status</option>
           <option value='single'>Single</option>
           <option value='married'>Married</option>
-          <option value='widow'>Widow</option>
-          <option value='divorce'>Divorce</option>
+          <option value='widowed'>Widowed</option>
+          <option value='divorced'>Divorced</option>
         </select>
         <p>{errors.civilstatus && "Civil Status is required"}</p>
 
