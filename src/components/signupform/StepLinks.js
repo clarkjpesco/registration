@@ -20,7 +20,7 @@ const StepLinks = () => {
 
   return (
     <div className='step-links'>
-      <NavLink to='/'>
+      <NavLink to='/registration'>
         {isPersonalDone ? "🟢" : "🔴"}Personal <span />{" "}
       </NavLink>
       {isPersonalDone ? (
