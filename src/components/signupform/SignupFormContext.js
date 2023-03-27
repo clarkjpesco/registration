@@ -6,11 +6,7 @@ export const useSignupForm = () => useContext(SignupFormContext);
 
 export function SignupFormProvider({ children }) {
   const [personal, setPersonal] = useState({});
-  const [morepersonal, setMorePersonal] = useState({});
-  const [citizen, setCitizen] = useState({});
-  const [contact, setContact] = useState({});
-  const [father, setFather] = useState({});
-  const [mother, setMother] = useState({});
+  const [parent, setParent] = useState({});
   const [course, setCourse] = useState({});
 
   return (
@@ -18,16 +14,8 @@ export function SignupFormProvider({ children }) {
       value={{
         personal,
         setPersonal,
-        morepersonal,
-        setMorePersonal,
-        citizen,
-        setCitizen,
-        contact,
-        setContact,
-        father,
-        setFather,
-        mother,
-        setMother,
+        parent,
+        setParent,
         course,
         setCourse,
       }}

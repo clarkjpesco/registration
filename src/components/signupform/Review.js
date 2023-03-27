@@ -2,18 +2,13 @@ import React from "react";
 import Animator from "./Animator";
 import { useSignupForm } from "./SignupFormContext";
 const Review = () => {
-  const { personal, morepersonal, citizen, contact, father, mother, course } =
-    useSignupForm();
+  const { personal, parent, course } = useSignupForm();
 
   function handleSubmit(e) {
     e.preventDefault();
     const data = {
       ...personal,
-      ...morepersonal,
-      ...citizen,
-      ...contact,
-      ...father,
-      ...mother,
+      ...parent,
       ...course,
     };
     // axios.post('url-goes-here',data);
@@ -27,29 +22,30 @@ const Review = () => {
         <p>
           🍕Personal🍕 <br />
           <strong>Full Name</strong>: {personal.lastname}, {personal.firstname}{" "}
-          {personal.middlename} {personal.suffix} &nbsp;
-          <strong>Gender</strong>: {morepersonal.gender} <br />
-          <strong>Civil Status</strong>: {morepersonal.civilstatus} &nbsp;
-          <strong>Birthdate</strong>: {morepersonal.birthdate} <br />
-          <strong>Nationality</strong>:{citizen.nationality} &nbsp;{" "}
-          <strong>Religion</strong>:{citizen.religion} <br />
-          <strong>Phone</strong>:{contact.phone} &nbsp; <strong>Email</strong>:
-          {contact.email} <br />
-          <strong>Address</strong>:{contact.address}
+          {personal.middlename} &nbsp;
+          <strong>Gender</strong>: {personal.gender} <br />
+          <strong>Civil Status</strong>: {personal.civilstatus} &nbsp;
+          <strong>Birthdate</strong>: {personal.birthdate} <br />
+          <strong>Birthplace</strong>: {personal.birthplace} <br />
+          <strong>Nationality</strong>:{personal.nationality} &nbsp;{" "}
+          <strong>Religion</strong>:{personal.religion} <br />
+          <strong>Mobile</strong>:{personal.mobile} &nbsp;{" "}
+          <strong>Email</strong>:{personal.email} <br />
+          <strong>Present Address</strong>:{personal.present_address}
         </p>
 
         <p>
           🍕Guardian🍕 <br />
-          <strong>Father's Name</strong>: {father.father_lastname},
-          {father.father_firstname} &nbsp; <strong>Phone</strong>:
-          {father.father_phone}
+          <strong>Father's Name</strong>: {parent.father_lastname},
+          {parent.father_firstname} {parent.father_middlename} &nbsp;{" "}
+          <strong>Mobile</strong>:{parent.father_mobile}
           <br />
-          <strong>Address</strong>:{father.father_address}
+          <strong>Present Address</strong>:{parent.father_present_address}
           <br />
-          <strong>Mother's Name</strong>: {mother.mother_lastname},{" "}
-          {mother.mother_firstname} &nbsp; <strong>Phone</strong>:
-          {mother.mother_phone} <br />
-          <strong>Address</strong>:{mother.mother_address}
+          <strong>Mother's Name</strong>: {parent.mother_lastname},
+          {parent.mother_firstname} {parent.mother_middlename}&nbsp;{" "}
+          <strong>Mobile</strong>:{parent.mother_mobile} <br />
+          <strong>Present Address</strong>:{parent.mother_present_address}
         </p>
 
         <p>

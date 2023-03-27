@@ -7,15 +7,10 @@ function isEmpty(obj) {
 }
 
 const StepLinks = () => {
-  const { personal, morepersonal, citizen, contact, father, mother, course } =
-    useSignupForm();
+  const { personal, parent, course } = useSignupForm();
 
   const isPersonalDone = !isEmpty(personal);
-  const isMorePersonalDone = !isEmpty(morepersonal);
-  const isCitizenDone = !isEmpty(citizen);
-  const isContactDone = !isEmpty(contact);
-  const isFatherDone = !isEmpty(father);
-  const isMotherDone = !isEmpty(mother);
+  const isParentDone = !isEmpty(parent);
   const isCourseDone = !isEmpty(course);
 
   return (
@@ -23,65 +18,18 @@ const StepLinks = () => {
       <NavLink to='/registration'>
         {isPersonalDone ? "🟢" : "🔴"}Personal <span />{" "}
       </NavLink>
+
       {isPersonalDone ? (
-        <NavLink to='/more'>
-          {isMorePersonalDone ? "🟢" : "🔴"}More <span />
+        <NavLink to='/parents'>
+          {isParentDone ? "🟢" : "🔴"}Parents <span />
         </NavLink>
       ) : (
         <a>
-          More <span />
-        </a>
-      )}
-      {isPersonalDone && isMorePersonalDone ? (
-        <NavLink to='/citizen'>
-          {isCitizenDone ? "🟢" : "🔴"}Citizen <span />
-        </NavLink>
-      ) : (
-        <a>
-          Citizen <span />
+          Parent <span />
         </a>
       )}
 
-      {isPersonalDone && isMorePersonalDone && isCitizenDone ? (
-        <NavLink to='/contact'>
-          {isContactDone ? "🟢" : "🔴"}Contact <span />
-        </NavLink>
-      ) : (
-        <a>
-          Contact <span />
-        </a>
-      )}
-      {isPersonalDone &&
-      isMorePersonalDone &&
-      isCitizenDone &&
-      isContactDone ? (
-        <NavLink to='/father'>
-          {isFatherDone ? "🟢" : "🔴"}Father <span />
-        </NavLink>
-      ) : (
-        <a>
-          Father <span />
-        </a>
-      )}
-      {isPersonalDone &&
-      isMorePersonalDone &&
-      isCitizenDone &&
-      isContactDone &&
-      isFatherDone ? (
-        <NavLink to='/mother'>
-          {isMotherDone ? "🟢" : "🔴"}Mother <span />
-        </NavLink>
-      ) : (
-        <a>
-          Mother <span />
-        </a>
-      )}
-      {isPersonalDone &&
-      isMorePersonalDone &&
-      isCitizenDone &&
-      isContactDone &&
-      isFatherDone &&
-      isMotherDone ? (
+      {isPersonalDone && isParentDone ? (
         <NavLink to='/course'>
           {isCourseDone ? "🟢" : "🔴"}Course <span />
         </NavLink>
@@ -91,13 +39,7 @@ const StepLinks = () => {
         </a>
       )}
 
-      {isPersonalDone &&
-      isMorePersonalDone &&
-      isCitizenDone &&
-      isContactDone &&
-      isFatherDone &&
-      isMotherDone &&
-      isCourseDone ? (
+      {isPersonalDone && isParentDone && isCourseDone ? (
         <NavLink to='/review' style={{ float: "right" }}>
           Review <span />
         </NavLink>

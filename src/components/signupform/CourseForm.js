@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import Animator from "./Animator";
 import { useSignupForm } from "./SignupFormContext";
-
+import "./CourseForm.styles.css";
 const CourseForm = () => {
   const {
     register,

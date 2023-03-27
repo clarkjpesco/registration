@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 * {
   box-sizing: border-box;
@@ -7,7 +7,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Merriweather", serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 h1,
@@ -31,7 +31,8 @@ h6 {
 }
 
 .signup-form {
-  min-width: 500px;
+  min-width: 720px;
+  /* min-width: 500px; */
   min-height: 600px;
   position: relative;
 }
@@ -62,7 +63,7 @@ h6 {
   font-size: 16px;
   padding: 8px 10px;
   margin-right: 10px;
-  font-family: "Merriweather", serif;
+  font-family: "Roboto", sans-serif;
   text-decoration: none;
   cursor: pointer;
   position: relative;
@@ -134,7 +135,7 @@ input[type="submit"] {
   width: 100%;
   transition: 0.3s ease all;
   font-size: 16px;
-  font-family: "Merriweather", serif;
+  font-family: "Roboto", sans-serif;
 }
 
 input[type="text"]:focus,
@@ -157,3 +158,8 @@ input[type="submit"]:hover {
   background: #eda27f;
 }
 
+@media only screen and (max-width: 600px) {
+  .signup-form {
+    min-width: 500px;
+  }
+}
