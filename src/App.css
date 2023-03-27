@@ -158,8 +158,19 @@ input[type="submit"]:hover {
   background: #eda27f;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 500px) {
   .signup-form {
-    min-width: 500px;
+    min-width: 300px;
+  }
+  .app{
+    background: #cff2dc;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  form {
+    min-width: 400px;
   }
 }
