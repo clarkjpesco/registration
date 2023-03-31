@@ -25,7 +25,7 @@ const Review = () => {
           {personal.middlename} &nbsp;
           <strong>Gender</strong>: {personal.gender} <br />
           <strong>Civil Status</strong>: {personal.civilstatus} &nbsp;
-          <strong>Birthdate</strong>: {personal.birthdate} <br />
+          <strong>Birthdate</strong>: {personal.birthday} <br />
           <strong>Birthplace</strong>: {personal.birthplace} <br />
           <strong>Nationality</strong>:{personal.nationality} &nbsp;{" "}
           <strong>Religion</strong>:{personal.religion} <br />
